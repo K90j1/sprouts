@@ -1,0 +1,11 @@
+name: PluginEccube
+event: PluginEccube
+code: PluginEccube
+version: 0.0.1
+service:
+    - PluginEccubeServiceProvider
+#orm.path:
+#    - /Resource/doctrine
+#form:
+#    onSetData:
+#        Form\Type\PaymentFragmentForm

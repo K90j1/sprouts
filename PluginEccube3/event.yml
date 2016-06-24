@@ -1,0 +1,6 @@
+#
+# Event fock
+#
+
+eccube.event.render.shopping.before:
+    - [onRenderShoppingBefore, NORMAL]
