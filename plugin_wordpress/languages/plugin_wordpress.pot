@@ -1,0 +1,6 @@
+# Copyright (C)
+# This file is distributed under the same license as the Post Expirator package.
+
+#: plugin_wordpress.php:47
+msgid "Plugin Wordpress Options"
+msgstr ""
