@@ -1,23 +1,23 @@
-=== Plugin Wordpress ===
-Contributors:
-Donate link:
-Tags:
-Requires at least:
-Tested up to:
-Stable tag:
+# Plugin Wordpress
+* Contributors:
+* Donate link:
+* Tags:
+* Requires at least:
+* Tested up to:
+* Stable tag:
 
 This will be bootstrap for making plugin of wordpress.
 
-== Description ==
+## Description
 
 
-== Installation ==
+## Installation
 
 
-== Screenshots ==
+## Screenshots
 
 
-== Changelog ==
+## Changelog
 
 **Version 1.0**
 
@@ -28,8 +28,8 @@ This will be bootstrap for making plugin of wordpress.
     * crud database
     * cron
 
-== Upgrade Notice ==
+## Upgrade Notice
 
-== References ==
+## References
 * Post Expirator
     * [Plugin URI](http://wordpress.org/extend/plugins/post-expirator/)
