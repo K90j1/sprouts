@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.css">
+    <link rel="stylesheet" href="app/assets/localize.css">
+    <style type="text/css">
+        /**
+         * Hide when Angular is not yet loaded and initialized
+         */
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+</head>
+<body ng-app="angular_material" id="ng-app">
+<header></header>
+<article layout="column" layout-align="center center">
+    <section id="signUp" ng-cloak ng-controller="formController">
+        <form action="#" method="post" >
+            <md-toolbar style="border-radius: 6px 6px 0 0;">
+                <div class="md-toolbar-tools">
+                    <h1>INPUT FORM</h1>
+                </div>
+            </md-toolbar>
+            <div id="inputArea">
+                <md-input-container class="md-block">
+                    <input type="text" id="name" placeholder="NAME" name="name" ng-model="input.name"
+                           ng-minlength="8" ng-maxlength="50" ng-required="true"
+                           ng-change="input.name=input.name"
+                           ng-model-options="{updateOn:'blur'}"/>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <input type="password" id="password" placeholder="PASSWORD" name="password"
+                           ng-model="input.password"
+                           ng-minlength="8" ng-maxlength="50" ng-required="true"
+                           ng-change="input.password=input.password"
+                           ng-model-options="{updateOn:'blur'}"/>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <md-datepicker ng-model="input.birth_day" md-placeholder="BIRTHDAY"></md-datepicker>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <input type="text" id="postcode" placeholder="POSTCODE" name="postcode" ng-model="input.postcode"
+                           ng-minlength="7" ng-maxlength="7" ng-required="true"
+                           ng-change="input.postcode=input.postcode" pattern="[0-9]{7}"
+                           ng-model-options="{updateOn:'blur'}"/>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>PREFECTURE</label>
+                    <md-select ng-model="input.prefecture" ng-change="input.prefecture=input.prefecture" ng-required="true">
+                        <md-option ng-repeat="prefecture in input.prefectures" ng-value="prefecture">
+                            {{prefecture}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+                <md-input-container class="md-block">
+                <textarea id="address" placeholder="ADDRESS" name="address" ng-model="input.address" ng-minlength="2"
+                          ng-maxlength="255" rows="3" cols="40" ng-required="true"
+                          ng-change="input.address=input.address"
+                          ng-model-options="{updateOn:'blur'}"></textarea>
+                </md-input-container>
+                <md-checkbox ng-model="input.confirm" aria-label="confirm">AGREE</md-checkbox>
+                <div layout="row" layout-align="center none">
+                    <md-button type="submit" class="md-raised md-primary" ng-disabled="disabled">SUBMIT
+                    </md-button>
+                    <br>
+                </div>
+
+            </div>
+        </form>
+    </section>
+</article>
+<aside>
+</aside>
+<footer></footer>
+<script src="//code.jquery.com/jquery-2.2.3.min.js"
+        integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+<!-- Angular Material requires Angular.js Libraries -->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-aria.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.min.js"></script>
+<!-- Angular Material Library -->
+<script src="//ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
+<!--<script src="app/vendor/angular-material.js"></script>-->
+<script src="//use.fontawesome.com/38e4e444a4.js"></script>
+<script src="app/src/Config.js"></script>
+</body>
+</html>

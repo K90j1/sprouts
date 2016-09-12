@@ -1,4 +1,4 @@
-# SampleCasperJs.js
+# Login.js
 * Contributors:
 * Donate link:
 * Tags:
@@ -9,8 +9,8 @@
 This will be bootstrap for casperjs.
 
 ## Description
-`` casperjs --web-security=false --ignore-ssl-errors=true --ssl-protocol=any --cookies-file=cookies SampleCasperJs.js 2>&1 | tee log.html ``
-`` export PHANTOMJS_EXECUTABLE=/usr/local/bin/phantomjs casperjs --web-security=false --ignore-ssl-errors=true --ssl-protocol=any --cookies-file=cookies SampleCasperJs.js 2>&1 | tee log.html ``
+* `` casperjs --web-security=false --ignore-ssl-errors=true --ssl-protocol=any --cookies-file=cookies Login.js 2>&1 | tee log.html ``
+* `` export PHANTOMJS_EXECUTABLE=/usr/local/bin/phantomjs casperjs --web-security=false --ignore-ssl-errors=true --ssl-protocol=any --cookies-file=cookies Login.js 2>&1 | tee log.html ``
 
 ## Installation
 

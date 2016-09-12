@@ -1,10 +1,10 @@
 'use strict';
 
 /**
- * SampleCasperJs.js
+ * Login.js
  * @param {string} arg1
  * @param {string} arg2
- * casperjs --web-security=false --ignore-ssl-errors=true --ssl-protocol=any --cookies-file=cookies SampleCasperJs.js 2>&1 | tee log.html
+ * casperjs --web-security=false --ignore-ssl-errors=true --ssl-protocol=any --cookies-file=cookies Login.js 2>&1 | tee log.html
  **/
 
 var casper = require('casper').create({
@@ -21,7 +21,7 @@ var casper = require('casper').create({
 		this.exit();
 	},
 	onDie: function (message, status) {
-		console.log('DIE: Step' + message + " // " + status);
+		console.log('DIE: Step' + message);
 		this.exit();
 	}
 });
