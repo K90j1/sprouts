@@ -1,13 +1,1 @@
-# A sample Gemfile
 source 'https://rubygems.org'
-
-# gem "rails"
-gem 'mail'
-gem 'xml-simple'
-gem 'mysql'
-gem 'crack'
-gem 'addressable'
-gem 'activerecord', '~> 4.2', '>= 4.2.7.1'
-gem 'sqlite3'
-gem 'keychain'
-gem 'ruby-keychain'
