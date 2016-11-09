@@ -1,6 +1,6 @@
 #! /usr/local/bin/ruby
 
-require "#{File.dirname(__FILE__)}common/api_request_module.rb"
+require "#{File.dirname(__FILE__)}/common/api_request_module.rb"
 include ApiRequest
 
 #
@@ -35,19 +35,19 @@ end
 def main
   ApiRequest.print_header
   file = 'account::' + File.basename(__FILE__)
-  ApiRequest.logging("#{LOG_MSG_1} #{file}")
+  ApiRequest.logging("#{file}")
   cgi = CGI.new
   if (ApiRequest.is_blank? cgi['session_id']) && (ApiRequest.is_blank? cgi['account_id'])
     ApiRequest.error_message
-    ApiRequest.logging("#{LOG_MSG_4} #{file}")
+    ApiRequest.logging("#{file}")
     exit 1
   end
   if ApiRequest.is_blank? cgi['session_id']
-    ApiRequest.logging("#{LOG_MSG_2} #{file}::cgi['session_id'].blank?")
+    ApiRequest.logging("#{file}::cgi['session_id'].blank?")
     new_session_id = create_session cgi
     result = {'session_id' => new_session_id}
     print result.to_json
-    ApiRequest.logging("#{LOG_MSG_3} #{file}")
+    ApiRequest.logging("#{file}")
     exit 0
   end
   account_id = read_existing_session cgi
