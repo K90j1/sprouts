@@ -1,4 +1,6 @@
 machine:
+  general:
+    build_dir: AngularMaterial
   timezone:
     Asia/Tokyo
   ruby:
